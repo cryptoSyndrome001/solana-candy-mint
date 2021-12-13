@@ -1,4 +1,4 @@
-# solana-candy-minter
+# solana-candy-minter 
 
 Web application to mint tokens from a Metaplex candy machine
 
