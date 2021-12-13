@@ -1,128 +1,80 @@
-Contribution: 2021-08-26 20:00
+# solana-candy-minter
 
-Contribution: 2021-08-26 20:01
+Web application to mint tokens from a Metaplex candy machine
 
-Contribution: 2021-08-26 20:02
+## prerequisites
 
-Contribution: 2021-08-26 20:03
+- NodeJS - install through [NVM](https://github.com/nvm-sh/nvm)
+- [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/)
 
-Contribution: 2021-08-26 20:04
 
-Contribution: 2021-08-26 20:05
+## setup steps
 
-Contribution: 2021-08-26 20:06
+1. Setup a [Metaplex candy machine](https://github.com/metaplex-foundation/metaplex/tree/master/js/packages/cli)
 
-Contribution: 2021-08-26 20:07
+- Following [these instructions](https://threadreaderapp.com/thread/1433816437525659658.html) until step 9 may help.
 
-Contribution: 2021-08-26 20:08
+2. With the candy machine created, you should grab its address and also the config address.
 
-Contribution: 2021-08-26 20:09
+3. Deploy the application. The suggested platform is [Vercel](https://vercel.com/new)
 
-Contribution: 2021-08-26 20:10
+4. These variables have to be added to your production deployment environment variables:
 
-Contribution: 2021-08-27 20:00
+```bash
 
-Contribution: 2021-08-27 20:01
+# this is the address that is logged when you create the candy machine
+NEXT_PUBLIC_CANDY_MACHINE_ADDRESS=
 
-Contribution: 2021-08-27 20:02
+# these are inside the cache file on metaplex .cache/ folder
+NEXT_PUBLIC_CANDY_MACHINE_CACHE_PROGRAM_UUID=
+NEXT_PUBLIC_CANDY_MACHINE_CACHE_PROGRAM_CONFIG=
 
-Contribution: 2021-08-27 20:03
+# connection type - options are devnet and mainnet-beta
+NEXT_PUBLIC_CONNECTION_NETWORK=
 
-Contribution: 2021-08-27 20:04
+# rpc http endpoints (ex: https://api.devnet.solana.com)
+NEXT_PUBLIC_SOLANA_RPC_HOST_DEVNET=
+NEXT_PUBLIC_SOLANA_RPC_HOST_MAINNET_BETA=
 
-Contribution: 2021-08-28 20:00
+# analytics tracking code
+NEXT_PUBLIC_GA_ID=
+```
 
-Contribution: 2021-08-28 20:01
+5. Test out your minting process. If you followed the steps correctly, you should be able to mint tokens.
 
-Contribution: 2021-08-28 20:02
+6. Change the `styles/theme.ts` file to easily match your own design.
 
-Contribution: 2021-08-28 20:03
+7. Spread the word and have success with your project =)
 
-Contribution: 2021-08-28 20:04
+## development steps
 
-Contribution: 2021-08-28 20:05
+1. Install dependencies by running:
 
-Contribution: 2021-08-28 20:06
+```bash
+yarn
+```
 
-Contribution: 2021-08-28 20:07
+2. Add environment variables to `.env.local`. (copy from `.env.template`)
 
-Contribution: 2021-08-28 20:08
+3. Run the development server:
 
-Contribution: 2021-08-29 20:00
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-Contribution: 2021-08-29 20:01
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Contribution: 2021-08-29 20:02
+## Learn More
 
-Contribution: 2021-08-31 20:00
+To learn more about Next.js, take a look at the following resources:
 
-Contribution: 2021-08-31 20:01
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-Contribution: 2021-08-31 20:02
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-Contribution: 2021-08-31 20:03
+## Deploy on Vercel
 
-Contribution: 2021-09-01 20:00
-
-Contribution: 2021-09-01 20:01
-
-Contribution: 2021-09-01 20:02
-
-Contribution: 2021-09-01 20:03
-
-Contribution: 2021-09-01 20:04
-
-Contribution: 2021-09-01 20:05
-
-Contribution: 2021-09-01 20:06
-
-Contribution: 2021-09-01 20:07
-
-Contribution: 2021-09-01 20:08
-
-Contribution: 2021-09-01 20:09
-
-Contribution: 2021-09-01 20:10
-
-Contribution: 2021-09-01 20:11
-
-Contribution: 2021-09-03 20:00
-
-Contribution: 2021-09-03 20:01
-
-Contribution: 2021-09-03 20:02
-
-Contribution: 2021-09-03 20:03
-
-Contribution: 2021-09-03 20:04
-
-Contribution: 2021-09-03 20:05
-
-Contribution: 2021-09-03 20:06
-
-Contribution: 2021-09-03 20:07
-
-Contribution: 2021-09-03 20:08
-
-Contribution: 2021-09-03 20:09
-
-Contribution: 2021-09-03 20:10
-
-Contribution: 2021-09-04 20:00
-
-Contribution: 2021-09-05 20:00
-
-Contribution: 2021-09-05 20:01
-
-Contribution: 2021-09-05 20:02
-
-Contribution: 2021-09-05 20:03
-
-Contribution: 2021-09-06 20:00
-
-Contribution: 2021-09-06 20:01
-
-Contribution: 2021-09-06 20:02
-
-Contribution: 2021-09-06 20:03
-
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
